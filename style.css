@@ -1,14 +1,27 @@
-/* Stile iniziale: tipografia, colori e variabili CSS sono già predisposti.
-   Lavoreremo su collegamenti, CSS condiviso e disposizione delle schede. */
+@font-face {
+  font-family: 'SofinaTitoli';
+  src: url('assets/font/AlteHaasGroteskBold.ttf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
 
-/* Scelte comuni: ogni regola usa var() per richiamarne il valore. */
+@font-face {
+  font-family: 'SwitzerTesto';
+  src: url('assets/font/Switzer-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --colore-primario: #C65C36;
-  --colore-primario-scuro: #97300B;
+  --colore-primario: #1a365d;
+  --colore-primario-scuro: #150075;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #040504;
-  --font-testo: Arial, Helvetica, sans-serif;
-  --font-titoli: Georgia, "Times New Roman", serif;
+  
+  --font-testo: 'SwitzerTesto', Arial, Helvetica, sans-serif;
+  --font-titoli: 'SofinaTitoli', Georgia, "Times New Roman", serif;
 }
 
 * {
@@ -44,9 +57,48 @@ a:focus-visible {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #1a365d; /* Sostituisci con il blu che preferisci (es. #1a365d o un altro codice esadecimale blu) */
+  color: #ffffff; /* Testo generale bianco */
   padding: 1.25rem 0;
-  border-bottom: 4px solid var(--colore-primario); /* Usiamo la variabile CSS invece di un colore fisso */
+  border-bottom: none; /* Rimuoviamo la linea inferiore precedente */
 }
+
+/* Facciamo in modo che il brand (titolo e sottotitolo) sia bianco */
+.site-header .brand {
+  color: #ffffff;
+}
+
+.site-header .brand span {
+  color: #e2e8f0; /* Un bianco leggermente più tenue per il sottotitolo, opzionale */
+}
+
+/* Rendiamo bianchi anche i link del menu di navigazione nell'header */
+.site-header nav a {
+  color: #ffffff;
+}
+
+/* Se un link è la pagina corrente, facciamolo risaltare (es. con un sottolineato o un bianco pieno) */
+.site-header nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Colore dei link al passaggio del mouse all'interno dell'header */
+.site-header nav a:hover {
+  color: #e2e8f0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  flex-wrap: wrap;                
+  gap: 1rem;
+}
+
 
 .brand {
   display: inline-block;
@@ -68,10 +120,26 @@ nav {
   margin-top: 1rem;
 }
 
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; 
+}
+
 nav a {
   display: inline-block;
-  margin-right: 1rem;
   padding: 0.25rem 0;
+}
+
+@media (min-width: 600px) {
+  nav {
+    flex-direction: row;
+    gap: 1.5rem; 
+  }
+  
+  nav a {
+    margin-right: 0; 
+  }
 }
 
 nav a[aria-current="page"] {
@@ -79,7 +147,7 @@ nav a[aria-current="page"] {
 }
 
 .intro {
-  padding: 3rem 0 1rem;
+  padding: 3rem 0 5rem;
 }
 
 .eyebrow,
@@ -92,24 +160,26 @@ nav a[aria-current="page"] {
 h1,
 h2,
 h3 {
-  font-family: var(--font-titoli);
+ font-family: var(--font-titoli);
   line-height: 1.2;
 }
 
 h1 {
   max-width: 18ch;
   margin: 0.75rem 0 1.25rem;
-  font-size: 2.5rem;
+  font-size: 5rem;
+  line-height: 0.8; /
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 2.0rem;
 }
 
 h3 {
   margin: 0.5rem 0 0.75rem;
-  font-size: 1.375rem;
+  font-size: 1.9rem;
 }
+
 
 .lead {
   max-width: 48ch;
