@@ -1,6 +1,11 @@
+
+/* ========================================
+   FONT PERSONALIZZATI
+======================================== */
+
 @font-face {
   font-family: 'SofinaTitoli';
-  src: url('assets/font/AlteHaasGroteskBold.ttf') format('opentype');
+  src: url('assets/font/AlteHaasGroteskBold.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -14,15 +19,25 @@
   font-display: swap;
 }
 
+
+/* ========================================
+   COLORI E VARIABILI
+======================================== */
+
 :root {
   --colore-primario: #1a365d;
   --colore-primario-scuro: #150075;
   --colore-sfondo: #f5f2e9;
   --colore-testo: #040504;
-  
+
   --font-testo: 'SwitzerTesto', Arial, Helvetica, sans-serif;
   --font-titoli: 'SofinaTitoli', Georgia, "Times New Roman", serif;
 }
+
+
+/* ========================================
+   IMPOSTAZIONI GENERALI
+======================================== */
 
 * {
   box-sizing: border-box;
@@ -50,55 +65,60 @@ a:focus-visible {
   outline-offset: 4px;
 }
 
+
+/* ========================================
+   CONTENITORE PRINCIPALE
+======================================== */
+
 .container {
   width: 92%;
   max-width: 68rem;
   margin: 0 auto;
 }
 
+
+/* ========================================
+   HEADER E MENU
+======================================== */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #1a365d; /* Sostituisci con il blu che preferisci (es. #1a365d o un altro codice esadecimale blu) */
-  color: #ffffff; /* Testo generale bianco */
+  background-color: #1a365d;
+  color: #ffffff;
   padding: 1.25rem 0;
-  border-bottom: none; /* Rimuoviamo la linea inferiore precedente */
+  border-bottom: none;
 }
 
-/* Facciamo in modo che il brand (titolo e sottotitolo) sia bianco */
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .site-header .brand {
   color: #ffffff;
 }
 
 .site-header .brand span {
-  color: #e2e8f0; /* Un bianco leggermente più tenue per il sottotitolo, opzionale */
+  color: #e2e8f0;
 }
 
-/* Rendiamo bianchi anche i link del menu di navigazione nell'header */
 .site-header nav a {
   color: #ffffff;
 }
 
-/* Se un link è la pagina corrente, facciamolo risaltare (es. con un sottolineato o un bianco pieno) */
 .site-header nav a[aria-current="page"] {
   font-weight: bold;
   text-decoration: underline;
 }
 
-/* Colore dei link al passaggio del mouse all'interno dell'header */
 .site-header nav a:hover {
   color: #e2e8f0;
 }
-
-.site-header .container {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;            
-  flex-wrap: wrap;                
-  gap: 1rem;
-}
-
 
 .brand {
   display: inline-block;
@@ -117,13 +137,10 @@ a:focus-visible {
 }
 
 nav {
-  margin-top: 1rem;
-}
-
-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; 
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 nav a {
@@ -131,20 +148,21 @@ nav a {
   padding: 0.25rem 0;
 }
 
-@media (min-width: 600px) {
-  nav {
-    flex-direction: row;
-    gap: 1.5rem; 
-  }
-  
-  nav a {
-    margin-right: 0; 
-  }
-}
-
 nav a[aria-current="page"] {
   font-weight: bold;
 }
+
+@media (min-width: 600px) {
+  nav {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
+
+
+/* ========================================
+   INTRODUZIONE E TITOLI
+======================================== */
 
 .intro {
   padding: 3rem 0 5rem;
@@ -160,7 +178,7 @@ nav a[aria-current="page"] {
 h1,
 h2,
 h3 {
- font-family: var(--font-titoli);
+  font-family: var(--font-titoli);
   line-height: 1.2;
 }
 
@@ -168,18 +186,17 @@ h1 {
   max-width: 18ch;
   margin: 0.75rem 0 1.25rem;
   font-size: 5rem;
-  line-height: 0.8; /
+  line-height: 0.8;
 }
 
 h2 {
-  font-size: 2.0rem;
+  font-size: 2rem;
 }
 
 h3 {
   margin: 0.5rem 0 0.75rem;
   font-size: 1.9rem;
 }
-
 
 .lead {
   max-width: 48ch;
@@ -188,6 +205,34 @@ h3 {
 
 .reading-text {
   max-width: 65ch;
+}
+
+
+/* ========================================
+   SEZIONI DEL SITO
+======================================== */
+
+.content-section {
+  width: 100%;
+  margin: 2rem 0 3rem;
+}
+
+.content-section h2 {
+  margin-top: 0;
+}
+
+
+/* ========================================
+   IMMAGINI E PULSANTI
+======================================== */
+
+.festival-image {
+  display: block;
+  width: 100%;
+  max-width: 54rem;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
 }
 
 .button-link {
@@ -205,28 +250,16 @@ h3 {
   background: var(--colore-primario-scuro);
 }
 
-.content-section {
-  margin: 2rem 0 3rem;
-}
 
-.festival-image {
-  display: block;
-  width: 100%;
-  max-width: 54rem;
-  height: auto;
-  margin-top: 1.5rem;
-  border-radius: 0.75rem;
-}
+/* ========================================
+   PROGRAMMA - GRIGLIA EVENTI
+======================================== */
 
-.venues {
-  padding-left: 1.25rem;
+.event-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
 }
-
-.venues li {
-  margin-bottom: 0.5rem;
-}
-
-/* Qui inseriremo la regola .event-grid durante la demo. */
 
 .event-card {
   margin-bottom: 1.5rem;
@@ -255,48 +288,22 @@ h3 {
   font-size: 0.875rem;
 }
 
-.site-footer {
-  padding: 1.25rem 0;
-  border-top: 1px solid #b7c0b7;
-  color: #46564b;
-  font-size: 0.875rem;
-}
-
-.skip-link {
-  position: absolute;
-  top: -6rem;
-  left: 1rem;
-  padding: 0.75rem 1rem;
-  background: #ffffff;
-  color: var(--colore-testo);
-}
-
-.skip-link:focus {
-  top: 1rem;
-}
-
-/* Qui aggiungeremo la media query durante la demo. */
-
-/* Griglia degli eventi: di base una colonna (per schermi stretti) */
-.event-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-}
-
-/* Da 600px in su: due colonne */
 @media (min-width: 600px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Da 1024px in su: tre colonne */
 @media (min-width: 1024px) {
   .event-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+
+/* ========================================
+   GALLERIA FOTOGRAFICA SWIPER
+======================================== */
 
 .sedi-slider {
   position: relative;
@@ -317,6 +324,18 @@ h3 {
   height: auto;
 }
 
+.sedi-slider .swiper-button-prev,
+.sedi-slider .swiper-button-next {
+  top: 40%;
+  margin-top: 0;
+  transform: translateY(-50%);
+}
+
+
+/* ========================================
+   MAPPA DEI LUOGHI
+======================================== */
+
 .mappa-responsive {
   position: relative;
   width: 100%;
@@ -332,9 +351,87 @@ h3 {
   border: 0;
 }
 
-.sedi-slider .swiper-button-prev,
-.sedi-slider .swiper-button-next {
-  top: 40%;
-  margin-top: 0;
-  transform: translateY(-50%);
+.lista-sedi {
+  padding-left: 1.25rem;
+}
+
+.lista-sedi li {
+  margin-bottom: 0.75rem;
+}
+
+.mappa-link-esterno {
+  margin-top: 1rem;
+}
+
+
+/* ========================================
+   METEO A TORINO
+======================================== */
+
+.weather-box {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+
+  /* Allineamento con il margine del contenuto */
+  margin: 1.5rem 0 0 0;
+
+  padding: 1.5rem;
+
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+
+  background: #ffffff;
+  color: var(--colore-testo);
+}
+
+.weather-box p {
+  margin: 0 0 0.8rem;
+}
+
+.weather-box p:last-child {
+  margin-bottom: 0;
+}
+
+.weather-box strong {
+  font-weight: 700;
+  color: var(--colore-primario);
+}
+
+.weather-box a {
+  text-decoration: underline;
+}
+
+.weather-box [hidden] {
+  display: none;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid #b7c0b7;
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+
+/* ========================================
+   LINK ACCESSIBILITÀ
+======================================== */
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: var(--colore-testo);
+}
+
+.skip-link:focus {
+  top: 1rem;
 }

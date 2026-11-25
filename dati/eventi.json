@@ -1,0 +1,70 @@
+
+[
+  {
+    "id": 1,
+    "titolo": "Lettere in movimento",
+    "data": "2026-06-12",
+    "orario": "10:00",
+    "categoria": "Incontro",
+    "descrizione": "Come cambia un messaggio quando cambiano le lettere? Un incontro su tipografia, ritmo e comunicazione visiva.",
+    "immagine": "assets/foto programma/1.png",
+    "immagine_alt": "Due forme geometriche che si toccano",
+    "sede_id": 1
+  },
+  {
+    "id": 2,
+    "titolo": "Materia seconda",
+    "data": "2026-06-12",
+    "orario": "14:00",
+    "categoria": "Laboratorio",
+    "descrizione": "Un laboratorio per osservare materiali di recupero e immaginare nuovi utilizzi attraverso piccoli esperimenti.",
+    "immagine": "assets/foto programma/2.png",
+    "immagine_alt": "Forma geometrica con spigoli",
+    "sede_id": 2
+  },
+  {
+    "id": 3,
+    "titolo": "La città in un manifesto",
+    "data": "2026-06-12",
+    "orario": "17:00",
+    "categoria": "Mostra",
+    "descrizione": "Una raccolta di manifesti immaginari racconta quartieri, incontri e abitudini della città attraverso forme e colori.",
+    "immagine": "assets/foto programma/3.png",
+    "immagine_alt": "Forma geometrica arrotondata",
+    "sede_id": 3
+  },
+  {
+    "id": 4,
+    "titolo": "Oggetti in dialogo",
+    "data": "2026-06-13",
+    "orario": "10:00",
+    "categoria": "Incontro",
+    "descrizione": "Designer e artigiani discutono come nascono gli oggetti quotidiani, tra funzione, cura dei dettagli e possibilità di riparazione.",
+    "immagine": "assets/foto programma/4.png",
+    "immagine_alt": "Forma geometrica arrotondata e tagliata",
+    "sede_id": 1
+  },
+  {
+    "id": 5,
+    "titolo": "Mappe da abitare",
+    "data": "2026-06-13",
+    "orario": "14:00",
+    "categoria": "Laboratorio",
+    "descrizione": "Disegniamo una mappa fatta di percorsi, punti di incontro e luoghi da riscoprire, partendo dall'esperienza di chi li attraversa.",
+    "immagine": "assets/foto programma/5.png",
+    "immagine_alt": "Forma geometrica arrotondata con bordi lineari",
+    "sede_id": 2
+  },
+  {
+    "id": 6,
+    "titolo": "Progettare insieme",
+    "data": "2026-06-13",
+    "orario": "17:00",
+    "categoria": "Mostra",
+    "descrizione": "Una selezione di progetti collettivi mostra come idee diverse possano diventare un risultato condiviso.",
+    "immagine": "assets/foto programma/6.png",
+    "immagine_alt": "Forme geometriche orizzontali spigolose intersecate tra di loro",
+    "sede_id": 3
+  }
+]
+
