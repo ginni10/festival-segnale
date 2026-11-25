@@ -346,4 +346,92 @@ h3 {
 .mappa-responsive iframe {
   position: absolute;
   inset: 0;
-  w
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lista-sedi {
+  padding-left: 1.25rem;
+}
+
+.lista-sedi li {
+  margin-bottom: 0.75rem;
+}
+
+.mappa-link-esterno {
+  margin-top: 1rem;
+}
+
+
+/* ========================================
+   METEO A TORINO
+======================================== */
+
+.weather-box {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+
+  /* Allineamento con il margine del contenuto */
+  margin: 1.5rem 0 0 0;
+
+  padding: 1.5rem;
+
+  border: 1px solid #b7c0b7;
+  border-radius: 0.75rem;
+
+  background: #ffffff;
+  color: var(--colore-testo);
+}
+
+.weather-box p {
+  margin: 0 0 0.8rem;
+}
+
+.weather-box p:last-child {
+  margin-bottom: 0;
+}
+
+.weather-box strong {
+  font-weight: 700;
+  color: var(--colore-primario);
+}
+
+.weather-box a {
+  text-decoration: underline;
+}
+
+.weather-box [hidden] {
+  display: none;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid #b7c0b7;
+  color: #46564b;
+  font-size: 0.875rem;
+}
+
+
+/* ========================================
+   LINK ACCESSIBILITÀ
+======================================== */
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: #ffffff;
+  color: var(--colore-testo);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
